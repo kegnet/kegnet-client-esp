@@ -28,6 +28,8 @@ void setup()   {
     listFiles();
   }
 
+  delay(200);
+
   conf = new Conf();
   tempSensor = new DigitalTempSensor(conf);
   flowMeter = new FlowMeter(conf);

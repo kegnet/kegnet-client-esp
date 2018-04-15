@@ -9,7 +9,8 @@ DigitalTempSensor::DigitalTempSensor(Conf *conf) {
   this->sensor = new DallasTemperature(oneWire);
 
   sensor->begin();
-	sensor->setResolution(9);
+	sensor->setWaitForConversion(false);
+	sensor->setResolution(12);
 }
 
 float DigitalTempSensor::getLastTempC() {

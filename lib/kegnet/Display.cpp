@@ -8,9 +8,11 @@ Display::Display(Conf *conf, FlowMeter *flowMeter, DigitalTempSensor *tempSensor
   tft = new TFT_eSPI();
   tft->init();
 
-  delay(10);
+  delay(200);
 
   clear();
+
+  delay(200);
 
   sprite = new TFT_eSprite(tft);
   sprite->setColorDepth(8);
